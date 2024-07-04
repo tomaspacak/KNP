@@ -1,0 +1,73 @@
+
+/*root*/
+:root {
+    --primaryColor: #b4b2b2;
+}
+.wrapper {
+    margin: 0 1em;
+}
+header {
+    text-align: center;
+}
+
+
+.panel__skore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.skore {
+    display: flex;
+    gap: 1em;
+}
+.skore__text {
+    padding: 0.5em 1em;
+    background-color: var(--primaryColor);
+    border-radius: 1em;
+}
+
+.moves__wrapper {padding: 1em; border-radius: 1em; background-color: var(--primaryColor);}
+.moves__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__icon {width: 2em;}
+.moves {
+    display: flex;
+    justify-content: space-between;   
+}
+.moves__img {width: 1.6em;}
+
+.vysledek {
+    text-align: center;
+    padding: 0.5em 5em;
+    background-color: var(--primaryColor);
+    display: block;
+    width: min-content;
+    margin: 1em auto;
+    border-radius: 2em;
+}
+img {width: 100%;}
+
+/*btn*/
+.btn--reset {
+    background-color: transparent;
+    border: none;
+}
+
+.reset__img {
+    padding: 1em;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: var(--primaryColor);
+}
+
+
+.tahy {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}

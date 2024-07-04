@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Kámen nůžky papír</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Kámen nůžky papír</h1>
+            <p>Hra</p>
+        </header>
+        <main>
+            <div class="panel">
+                <div class="panel__skore">
+                    <div>
+                        <button class="btn btn--reset" onclick="reset()"><img class="reset__img" src="./img/icon_reset.svg" alt="ikona pro reset"></button>
+                    </div>
+                    <div class="skore">
+                        <p class="skore__text skore__text--vyhry"></p>
+                        <p class="skore__text skore__text--prohry"></p>
+                        <p class="skore__text skore__text--remizy"></p>
+                    </div>
+                </div>
+                <div class="moves__wrapper">
+                    <div class="moves__header">
+                        <img class="header__icon" src="./img/icon_player.svg" alt="ikona hráče">
+                        <img class="header__icon" src="./img/icon_pc.svg" alt="ikona počítače">
+                    </div>
+                    <div class="moves">
+                        <p class="moves__move moves__move--player"></p>
+                        <img class="moves__img" src="./img/icon_vs.svg" alt="ikona dvou mečů">
+                        <p class="moves__move moves__move--pc"></p>
+                    </div>
+                </div>
+                <p class="vysledek"></p>
+                
+
+            </div>
+            <div class="tahy">
+                <button class="tahy__tah tahy__tah--kamen" onclick="playGame('kamen')"><img class="tah__img" src="./img/icon_move_kamen.svg" alt="obrázek herního tahu kámen"></button>
+                <button class="tahy__tah tahy__tah--nuzky" onclick="playGame('nuzky')"><img class="tah__img" src="./img/icon_move_nuzky.svg" alt="obrázek herního tahu nůžky"></button>
+                <button class="tahy__tah tahy__tah--papir" onclick="playGame('papir')"><img class="tah__img" src="./img/icon_move_papir.svg" alt="obrázek herního tahu papír"></button>
+            </div>
+        </main>
+        
+    </div>
+    <script src="./knp.js"></script>
+</body>
+</html>
