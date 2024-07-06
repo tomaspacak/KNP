@@ -1,5 +1,8 @@
 
 html {
-
+    font-family: 'Roboto', Arial, sans-serif;
     font-size: 12px;
 }
+
+.skore__text {font-weight: 600;}
+.vysledek {font-weight: 600; font-size: 16px;}

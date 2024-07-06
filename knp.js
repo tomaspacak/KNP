@@ -79,8 +79,8 @@ function playGame(playerMove) {
 
   /*zjeveni skore*/
     skoreDisplay();
-    document.querySelector('.moves__move--player').innerHTML =  `${playerMove}`;
-    document.querySelector('.moves__move--pc').innerHTML =  `${pcMove}`;
+    document.querySelector('.moves__move--player').innerHTML =  `<img class="move__icon" src="./img/icon_move_${playerMove}.svg" alt="tah hráče - ${playerMove}">`;
+    document.querySelector('.moves__move--pc').innerHTML =  `<img class="move__icon" src="./img/icon_move_${pcMove}.svg" alt="tah hráče - ${pcMove}">`;
     document.querySelector('.vysledek').innerHTML =  `${result}`;
 
 }
