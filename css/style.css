@@ -1,7 +1,12 @@
 
 /*root*/
 :root {
-    --primaryColor: #b4b2b2;
+    --titleBg: #003566;
+    --panel: #d9e8ff;
+    --panelHeader: #5E7BC7;
+    --win: #00BB34;
+    --prohra: #8F0000;
+
 }
 .wrapper {
     margin: 0 1em;
@@ -9,17 +14,16 @@
 }
 header {
     text-align: center;
-    background-color: var(--primaryColor);
+    background-color: var(--titleBg);
     padding: 1em 5em;
     width: fit-content;
     border-radius: 0 0 4em 4em;
     margin: 0 auto;
-    
+    margin-bottom: 5em;
 }
 h1, body {margin: 0;}
 header h1 + p {margin-top: 0.5em; margin-bottom: 0;}
 main {
-    margin-top: 5em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,13 +41,19 @@ main {
     gap: 1em;
 }
 .skore__text {
-    padding: 0.5em 1em;
-    background-color: var(--primaryColor);
-    border-radius: 1em;
+    padding: 0.5em 1.2em;
+    background-color: var(--panelHeader);
     margin: 0;
+    border: solid 3px;
+    border-color: var(--titleBg);
+    border-radius: 1.2em;
 }
+.skore__text--vyhry {border-color: var(--win);}
+.skore__text--prohry {border-color: var(--prohra);}
+.reset__img {transition: transform 1s;}
+.reset__img.rotating {animation: rotate 0.6s linear;}
 
-.moves__wrapper {padding: 1em; border-radius: 1em; background-color: var(--primaryColor);}
+.moves__wrapper {padding: 1em; border-radius: 1em; background-color: var(--panel);}
 .moves__header {
     display: flex;
     justify-content: space-between;
@@ -62,25 +72,20 @@ main {
 .vysledek {
     text-align: center;
     padding: 0.5em 5em;
-    background-color: var(--primaryColor);
     display: block;
-    width: min-content;
+    width: 20%;
     margin: 1em auto;
     border-radius: 2em;
 }
-img {width: 100%; display: block;}
+img {width: 100%; display: inline-block;}
 
 /*btn*/
 .btn--reset {
     display: flex;
-    background-color: var(--primaryColor);
+    background-color: var(--panelHeader);
     border: none;
     padding: 0.5em;
     border-radius: 50%;
-}
-
-.reset__img {
-
 }
 
 
@@ -93,9 +98,25 @@ img {width: 100%; display: block;}
 .tahy__tah {
     display: flex;
     background-color: transparent;
-    border: 4px solid black;
+    border: 4px solid var(--titleBg);
+    border-radius: 1em;
     padding: 1em;
     flex-basis: 50px;
     flex-grow: 1;
 }
+.tah__img {transition: 0.4s;}
+.tahy__tah:hover .tah__img {
+    scale: 0.7;
+    transition: 0.4s;
+}
+.tahy__tah:focus {background-color: var(--titleBg);}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 

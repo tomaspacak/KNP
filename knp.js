@@ -7,6 +7,7 @@ if (skore === null) {
 
 /*reset skore*/
 function reset() {
+    document.querySelector('.vysledek').style.backgroundColor = 'white';
     skore.vyhry = 0;
     skore.prohry = 0;
     skore.remizy = 0;
@@ -65,15 +66,19 @@ function playGame(playerMove) {
         }
     }
 
+
     /*aktualizace skore*/
     if (result === 'vyhra') {
         skore.vyhry += 1;
+        document.querySelector('.vysledek').style.backgroundColor = '#00BB34';
     } else if (result === 'prohra') {
         skore.prohry += 1;
+        document.querySelector('.vysledek').style.backgroundColor = '#8F0000';
     } else if (result === 'remiza') {
         skore.remizy += 1;
+        document.querySelector('.vysledek').style.backgroundColor = '#003566';
     }
-
+    
     /*ulozeni skore*/
     localStorage.setItem('skore', JSON.stringify(skore));
 
@@ -92,6 +97,18 @@ function skoreDisplay() {
 }
 
 skoreDisplay();
+
+/*animece*/
+function rotateIcon() {
+    const icon = document.getElementById('resetImg');
+  if (icon) {
+    icon.classList.add('rotating');
+
+    icon.addEventListener('animationend', () => {
+      icon.classList.remove('rotating');
+    }, { once: true });
+  } 
+}
 
 
 

@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/typography.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
     <title>Kámen nůžky papír</title>
 </head>
 <body>
@@ -18,28 +20,28 @@
         </header>
         <main>
             <div class="panel">
-                <div class="panel__skore">
-                    <button class="btn btn--reset" onclick="reset()"><img class="reset__img" src="./img/icon_reset.svg" alt="ikona pro reset"></button>
-                    <div class="skore">
-                        <p class="skore__text skore__text--vyhry"></p>
-                        <p class="skore__text skore__text--prohry"></p>
-                        <p class="skore__text skore__text--remizy"></p>
+                <div class="panel__wrapper">
+                    <div class="panel__skore">
+                        <button class="btn btn--reset" onclick="reset(), rotateIcon()"><img id="resetImg" class="reset__img" src="./img/icon_reset.svg" alt="ikona pro reset"></button>
+                        <div class="skore">
+                            <p class="skore__text skore__text--vyhry"></p>
+                            <p class="skore__text skore__text--prohry"></p>
+                            <p class="skore__text skore__text--remizy"></p>
+                        </div>
                     </div>
-                </div>
-                <div class="moves__wrapper">
-                    <div class="moves__header">
-                        <img class="header__icon" src="./img/icon_player.svg" alt="ikona hráče">
-                        <img class="header__icon" src="./img/icon_pc.svg" alt="ikona počítače">
-                    </div>
-                    <div class="moves">
-                        <div class="moves__move moves__move--player"><img class="move__icon" src="./img/icon_move_kamen.png" alt="tah hráče"></div>
-                        <img class="moves__img" src="./img/icon_vs.svg" alt="ikona dvou mečů">
-                        <div class="moves__move moves__move--pc"><img class="move__icon" src="./img/icon_move_kamen.png" alt="tah počítače"></div>
+                    <div class="moves__wrapper">
+                        <div class="moves__header">
+                            <img class="header__icon" src="./img/icon_player.svg" alt="ikona hráče">
+                            <img class="header__icon" src="./img/icon_pc.svg" alt="ikona počítače">
+                        </div>
+                        <div class="moves">
+                            <div class="moves__move moves__move--player"><img class="move__icon" src="./img/icon_move_kamen.png" alt="tah hráče"></div>
+                            <img class="moves__img" src="./img/icon_vs.svg" alt="ikona dvou mečů">
+                            <div class="moves__move moves__move--pc"><img class="move__icon" src="./img/icon_move_kamen.png" alt="tah počítače"></div>
+                        </div>
                     </div>
                 </div>
                 <p class="vysledek"></p>
-                
-
             </div>
             <div class="tahy">
                 <button class="tahy__tah tahy__tah--kamen" onclick="playGame('kamen')"><img class="tah__img" src="./img/icon_move_kamen.svg" alt="obrázek herního tahu kámen"></button>

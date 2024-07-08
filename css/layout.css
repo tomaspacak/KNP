@@ -1,0 +1,27 @@
+main {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 800px) {
+    html {font-size: 14px;}
+    
+    main {max-width: 900px;}
+
+    .panel__wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1em;
+        max-width: 900px;
+    }
+    .panel {margin: 0 auto;}
+    .skore, .panel__skore {flex-direction: column;}
+    .panel__skore {flex-direction: column-reverse; flex-basis: 10em; margin: 1em 0;}
+    .moves__wrapper {width: 600px; height: 210px;}
+
+    .tahy {gap: 5em;}
+    .tahy__tah {max-width: 125px;}
+
+    .btn--reset {width: 2.8em;}
+    
+}
